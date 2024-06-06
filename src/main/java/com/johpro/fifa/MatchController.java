@@ -17,7 +17,7 @@ public class MatchController {
     @Autowired
     private MatchRepo mr;
 
-    private String jsonFile="src/main/resources/static/static.json";
+    private final String jsonFile="src/main/resources/static/static.json";
     private void saveToFile(List<Matches> matches){
         ObjectMapper objectMapper= new ObjectMapper();
         try(FileWriter fileWriter = new FileWriter(jsonFile)){
